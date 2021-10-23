@@ -20,36 +20,17 @@
   left: 0;
 }
 
+/*  ^ image  ====================== --*/
+@mixin image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
 /*  ^ flex row center  ====================== --*/
-@mixin fwrcc {
+@mixin flex {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin fnrcc {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-/*  ^ flex column center  ====================== --*/
-@mixin fwccc {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@mixin fnccc {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
