@@ -1,0 +1,102 @@
+$brown: #332208;
+$white: #fff;
+$dark: #1B1818;
+$firm: #332208;
+$acsent: #C5AC2D;
+
+$fmain: "Roboto Condensed",
+sans-serif;
+$fsec: "Fira Sans",
+sans-serif;
+
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  // padding: 0 15px;
+  margin: 0 auto;
+  // border: 1px dotted coral;
+}
+
+/*  ^ basic styles  ====================== --*/
+.ibg {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+/*  ^ btn  ====================== --*/
+.btn {
+  display: inline-block;
+  padding: 15px 20px;
+
+  font-family: $fmain;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: $acsent;
+  color: $white;
+  border: 1px solid $acsent;
+  transition: all .3s ease 0s;
+
+  &:hover {
+    background-color: $white;
+    color: $acsent;
+    border: 1px solid $acsent;
+  }
+}
+
+/*  ^ nav-link  ====================== --*/
+.nav-link {
+  position: relative;
+  display: inline-block;
+  opacity: 0.85;
+  transition: all .3s ease 0s;
+
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white;
+    opacity: 0;
+    transition: all .3s ease 0s;
+
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:hover.nav-link::before {
+    opacity: 1;
+  }
+}
